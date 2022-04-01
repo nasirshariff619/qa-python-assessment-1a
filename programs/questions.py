@@ -35,7 +35,10 @@
 
 
 def one(input1, input2):
-    return ""
+    if len(input1) > len(input2):
+        return input1
+    else:
+        return input2
 
    # <QUESTION 2>
 
@@ -61,7 +64,9 @@ def one(input1, input2):
 
 
 def two(input):
-    return ""
+    string = input.upper()
+    list1 = string.split("BERT")
+    return list1[1].lower()
 
 
     # <QUESTION 3>
@@ -85,7 +90,16 @@ def two(input):
 
 
 def three(arg1):
-    return ""
+    if arg1%5 == 0 :
+        if arg1 % 3 == 0:
+            return "fizzbuzz"
+    if arg1%5 == 0  :
+        return "buzz"
+    if arg1%3 == 0 :
+        return "fizz"
+    else:
+        return "null"
+
 
     # <QUESTION 4>
 
@@ -179,7 +193,27 @@ def six(input):
 
 
 def seven(input):
-    return ""
+    string = input.upper()
+    count = 0
+    for i in string:
+        if i == "A":
+            count += 1
+    for i in string:
+        if i == "E":
+            count += 1
+    for i in string:
+        if i == "I":
+            count += 1
+    for i in string:
+        if i == "O":
+            count += 1
+    for i in string:
+        if i == "U":
+            count += 1
+    for i in string:
+        if i == "Y":
+            count += 1
+    return count
 
     # <QUESTION 8>
 
@@ -198,7 +232,16 @@ def seven(input):
 
 
 def eight(input):
-    return ""
+    num = input + 1
+    list = []
+    count = 1
+    if input == 0:
+        return 1
+    for i in range(1,num):
+        list.append(i)
+    for n in list:
+        count *= n
+    return count
 
     # <QUESTION 9>
 
@@ -220,7 +263,7 @@ def eight(input):
 
 
 def nine(inputString, char):
-    return ""
+    return (inputString.index(char))+1
 
     # <QUESTION 10>
 
@@ -239,6 +282,11 @@ def nine(inputString, char):
 
     # How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
 
-
 def ten(string, int, char):
-    return ""
+    if int > len(string):
+        return False
+    if string[int-1] == char:
+        return True
+    else:
+        return False
+    
